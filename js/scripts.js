@@ -7,7 +7,7 @@ let pokemonList = [
         {name: 'Arbok', height: 3.5, type: 'Poison'},
         {name: 'Pikachu', height: 0.4, type: 'Electric'},
     ];
-
+    
 /* create a for loop that iterates over each item in pokemonList */
 /* Use document.write() inside the loop’s code to write the Pokémon name on your website’s DOM */
 /* Use what you’ve learned about adding strings in JavaScript to write the Pokémon’s height next to its name, for example, “Bulbasaur (height: 7)” */
@@ -28,3 +28,4 @@ let pokemonList = [
         document.write(pokemonList[i].name + " height: " + pokemonList[i].height + '<br>');
     }
   }*/
+
