@@ -13,21 +13,6 @@ let pokemonList = [
 /* Use what you’ve learned about adding strings in JavaScript to write the Pokémon’s height next to its name, for example, “Bulbasaur (height: 7)” */
 /* Within the loop, add a conditional, should check if the height is above a certain value. If it is, add the note “Wow, that’s big!” */
 
-/*if (height >= 2.0) {
-    document.write('Wow, that’s big!');
-  } else (height <= 2.0) {
-    document.write('You are just a little guy!');
-  } 
-  */
-
-  /*for (let i=0; i < pokemonList.height; i++) {
-    if (pokemonList[i].height >= 2.0){
-        document.write(pokemonList[i].name + " height: " + pokemonList[i].height + "Wow, that's big!" + '<br>');
-    }
-    else {
-        document.write(pokemonList[i].name + " height: " + pokemonList[i].height + '<br>');
-    }
-  }*/
 
 for (let i=0; i<pokemonList.length; i++) {
   if (pokemonList[i].height >= 2.0){
