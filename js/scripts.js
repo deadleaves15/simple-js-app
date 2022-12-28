@@ -8,11 +8,15 @@ let pokemonList = [
         {name: 'Pikachu', height: 0.4, type: 'Electric'},
     ];
 
-for (let i=0; i<pokemonList.length; i++) {
+/* for (let i=0; i<pokemonList.length; i++) {
   if (pokemonList[i].height >= 2.0){
   document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, that's big!" + "<br>");
   }
   else {
   document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ")" + "<br>")
   }
-}
+}*/
+
+pokemonList.forEach(function(user) {
+  document.write(user.name + ' is ' + user.height + ' meters.' + "<br>");
+});
