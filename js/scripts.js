@@ -24,5 +24,11 @@ let pokemonRepository = (function () {
 
 
 pokemonRepository.getAll().forEach(function(pokemon){
-  document.write(pokemon.name + ' is ' + pokemon.height + ' meters.' + "<br>");
+  let pokemonList = document.querySelector('.pokemon-list');
+  let pokemonItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('name-button');
+  pokemonItem.appendChild(button);
+  pokemonList.appendChild(pokemonItem);
 });

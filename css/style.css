@@ -1,0 +1,25 @@
+.name-button {
+    font-size: large;
+    background-color: #4CAF50;
+    border: 1px solid green;
+    color: black;
+    padding: 15px 32px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    display: block;
+}
+
+.pokemon-list {
+    list-style-type: none;
+  }
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
