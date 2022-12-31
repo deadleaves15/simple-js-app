@@ -6,6 +6,10 @@ let pokemonRepository = (function () {
     pokemonList.push(pokemon);
   }
 
+  function getAll() {
+    return pokemonList;
+  }
+
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
     let pokemonItem = document.createElement('li');
@@ -17,10 +21,6 @@ let pokemonRepository = (function () {
     button.addEventListener('click', function(event) {
       showDetails(pokemon);
     });
-  }
-
-  function getAll() {
-    return pokemonList;
   }
 
   function loadList() {
