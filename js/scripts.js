@@ -151,17 +151,29 @@ let pokemonRepository = (function () {
         alert('not confirmed');
       });
       
+      let dialogPromiseReject; // This can be set later, by showDialog
+
+      function hideModal() {
+        let modalContainer = document.querySelector('#modal-container');
+        modalContainer.classList.remove('is-visible');
+      
+        if (dialogPromiseReject) {
+          dialogPromiseReject();
+          dialogPromiseReject = null;
+        }
+      }
+
       return new Promise((resolve, reject) => {
-        cancelButton.addEventListener('click', () => {
-          hideModal();
-          reject();
-        });
+        cancelButton.addEventListener('click', hideModal);
         confirmButton.addEventListener('click', () => {
+          dialogPromiseReject = null; // Reset this
           hideModal();
           resolve();
-        })
+        });
+      
+        // This can be used to reject from other functions
+        dialogPromiseReject = reject;
       });
-    }
     });
 
   return {
