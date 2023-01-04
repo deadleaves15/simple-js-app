@@ -92,6 +92,11 @@ let pokemonRepository = (function () {
     showModal('Modal title', 'This is the modal content!');
   });
 
+  function hideModal() {
+    let modalContainer = document.querySelector('#modal-container');
+    modalContainer.classList.remove('is-visible');
+  }
+
   return {
     add: add,
     getAll: getAll,
