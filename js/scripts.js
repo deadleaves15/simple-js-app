@@ -145,6 +145,23 @@ let pokemonRepository = (function () {
 
     document.querySelector('#show-dialog').addEventListener('click', () => {
       showDialog('Confirm action', 'Are you sure you want to do this?');
+      hen(function() {
+        alert('confirmed!');
+      }, () => {
+        alert('not confirmed');
+      });
+      
+      return new Promise((resolve, reject) => {
+        cancelButton.addEventListener('click', () => {
+          hideModal();
+          reject();
+        });
+        confirmButton.addEventListener('click', () => {
+          hideModal();
+          resolve();
+        })
+      });
+    }
     });
 
   return {
