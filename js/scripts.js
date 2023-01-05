@@ -55,7 +55,7 @@ let pokemonRepository = (function () {
 
 /* Modal mania mayhem */
 
-  function showModal(title, text, imgageUrl) {
+  function showModal(title, text, imageUrl) {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.innerHTML = '';
     
@@ -76,7 +76,7 @@ let pokemonRepository = (function () {
     contentElement.innerText = text;
 
     let imageElement = document.createElement('img');
-    imageElement.setAttribute("src", img);
+    imageElement.setAttribute("src", imageUrl);
     imageElement.setAttribute("alt", "Pokemon image");
   
     modal.appendChild(closeButtonElement);
