@@ -44,7 +44,7 @@ let pokemonRepository = (function () {
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
-      pokemon.imageUrl = details.sprites.front_default;
+      item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.types = details.types;
     }).catch(function (e) {
@@ -55,7 +55,7 @@ let pokemonRepository = (function () {
 
 /* Modal mania mayhem */
 
-  function showModal(title, text, img) {
+  function showModal(title, text, imgageUrl) {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.innerHTML = '';
     
