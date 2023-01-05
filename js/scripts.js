@@ -108,7 +108,7 @@ let pokemonRepository = (function () {
     
     function showDetails(pokemon) {
       loadDetails(pokemon).then(function (updatedPokemon) {
-        showModal(updatedpokemon.name, updatedpokemon.name + "'s height is: " + updatedpokemon.height, updatedpokemon.imageURL);
+        showModal(updatedPokemon.name, updatedPokemon.name + "'s height is: " + updatedPokemon.height, updatedPokemon.imageURL);
       });
     }
 
