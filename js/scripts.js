@@ -52,16 +52,11 @@ let pokemonRepository = (function () {
     });
   }
 
-  function showDetails(pokemon) {
-    loadDetails(pokemon).then(function () {
-      showModal(pokemon.name, pokemon.name + "'s height is: " + pokemon.height, pokemon.imageURL);
-    });
-  }
 
-  function showModal(title, text) {
+/* Modal mania mayhem */
+
+  function showModal(title, text, img) {
     let modalContainer = document.querySelector('#modal-container');
-  
-    // Clear all existing modal content
     modalContainer.innerHTML = '';
   
     let modal = document.createElement('div');
@@ -77,13 +72,16 @@ let pokemonRepository = (function () {
   
     let contentElement = document.createElement('p');
     contentElement.innerText = text;
+
+    let imageElement = document.createElement('img');
+    imageElement.setAttribute("src", img);
+    imageElement.setAttribute("alt", "Pokemon image");
   
     modal.appendChild(closeButtonElement);
     modal.appendChild(titleElement);
     modal.appendChild(contentElement);
+    modal.appendChild(imageElement);
     modalContainer.appendChild(modal);
-  
-  
   
     modalContainer.classList.add('is-visible');
 
@@ -94,10 +92,6 @@ let pokemonRepository = (function () {
       }
     });
   }
-  
-  document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal('Modal title', 'This is the modal content!');
-  });
 
   function hideModal() {
     let modalContainer = document.querySelector('#modal-container');
@@ -111,7 +105,7 @@ let pokemonRepository = (function () {
     });
     
 
-    function showDialog(title, text) {
+    /*function showDialog(title, text) {
       showModal(title, text);
     
       // We have defined modalContainer here
@@ -166,7 +160,13 @@ let pokemonRepository = (function () {
         // This can be used to reject from other functions
         dialogPromiseReject = reject;
       });
-    });
+    }); */
+
+    function showDetails(pokemon) {
+      loadDetails(pokemon).then(function () {
+        showModal(pokemon.name, pokemon.name + "'s height is: " + pokemon.height, pokemon.imageURL);
+      });
+    }
 
   return {
     add: add,
