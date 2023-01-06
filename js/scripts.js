@@ -44,9 +44,9 @@ let pokemonRepository = (function () {
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
-      pokemon.imageUrl = details.sprites.front_default;
-      pokemon.height = details.height;
-      pokemon.types = details.types;
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
     }).catch(function (e) {
       console.log(e);
     });
@@ -58,7 +58,7 @@ let pokemonRepository = (function () {
   function showModal(title, text, imageUrl) {
     let modalContainer = document.querySelector('#modal-container');
     modalContainer.innerHTML = '';
-
+    
     let modal = document.createElement('div');
     modal.classList.add('modal');
   
@@ -105,8 +105,8 @@ let pokemonRepository = (function () {
     });
     
     function showDetails(pokemon) {
-      loadDetails(pokemon).then(function () {
-        showModal(pokemon.name, pokemon.name + "'s height is: " + pokemon.height, pokemon.imageURL);
+      loadDetails(pokemon).then(function (updatedPokemon) {
+        showModal(updatedPokemon.name, updatedPokemon.name + "'s height is: " + updatedPokemon.height, updatedPokemon.imageURL);
       });
     }
 
