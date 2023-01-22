@@ -2,19 +2,26 @@ h1, p {
   font-family: 'Pokemon Solid', sans-serif;
 }
 
+ul {
+  background-color: #196EEF;
+  padding: 15px 32px;
+  border: 5px solid #222224;
+}
+
 .pokemon-button {
     font-size: large;
-    background-color: #4CAF50;
-    border: 1px solid green;
+    background-color: #ee1515;
+    border: 1px solid #222224;
     color: black;
     padding: 15px 32px;
-    width: 50%;
+    width: 50px;
+    height: 25px;
     margin: 25px 50px 50px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 8px;
+    font-size: 18px;
+    border-radius: 25px 25px 0 0;
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     display: block;
@@ -26,8 +33,8 @@ h1, p {
   }
 
 button:hover {
-    background-color: #4CAF50;
-    color: white;
+    background-color: white;
+    color: #222224;
   }
 
   /* Modal */
