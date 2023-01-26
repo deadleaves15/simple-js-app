@@ -4,6 +4,8 @@ h1, p {
   background-color: #196EEF;
   padding: 15px 32px;
   border: 5px solid #222224;
+  width: 66%;
+  border-radius: 25px 25px;
 }
 
 

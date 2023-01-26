@@ -7,14 +7,12 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector('.pokemon-list');
-    let pokemonItem = document.createElement('li');
-    let button = document.createElement('button');
-    button.innerText = pokemon.name;
-    button.classList.add('pokemon-button');
+    let pokemonItem = $('<li class="list-group-item"></li>');
+    let button = $('<button class="pokemon-button btn btn-info" data-target="#pokemon-modal" data-toggle="modal">' + pokemon.name + '</button>');
+    
     pokemonItem.appendChild(button);
     pokemonList.appendChild(pokemonItem);
-    button.addEventListener('click', function(event) {
+    button.on('click', function() {
       showDetails(pokemon);
     });
   }
