@@ -7,11 +7,11 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon) {
-    let pokemonItem = $('<li class="list-group-item"></li>');
-    let button = $('<button class="pokemon-button btn btn-info" data-toggle="modal" data-target="#pokemon-modal">' + pokemon.name + '</button>');
+    let pokemonItem = $('<li class="group-list-item"></li>');
+    let button = $('<button class="pokemon-button btn btn-primary" data-toggle="modal" data-target="#pokemon-modal">' + pokemon.name + '</button>');
     
-    pokemonItem.appendChild(button);
-    pokemonList.appendChild(pokemonItem);
+    pokemonItem.append(button);
+    pokemonList.append(pokemonItem);
     button.on('click', function() {
       showDetails(pokemon);
     });
