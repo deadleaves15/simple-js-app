@@ -1,4 +1,5 @@
-h1, p {
+h1, p
+{
   font-family: 'Pokemon Solid', sans-serif;
   font-size: 20px;
   background-color: #196EEF;
@@ -8,33 +9,33 @@ h1, p {
   border-radius: 25px 25px;
 }
 
-
-.pokemon-button {
-    font-size: large;
-    background-color: #ee1515;
-    border: 1px solid #222224;
-    color: black;
-    padding: 15px 32px;
-    width: 50px;
-    height: 25px;
-    margin: 25px 50px 50px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 25px 25px 0 0;
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    display: block;
-    font-family: 'Pokemon Solid', sans-serif;
+.pokemon-button
+{
+  font-size: large;
+  background-color: #ee1515;
+  border: 1px solid #222224;
+  color: black;
+  padding: 15px 32px;
+  width: 50px;
+  height: 25px;
+  margin: 25px 50px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px 25px 0 0;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  display: block;
+  font-family: 'Pokemon Solid', sans-serif;
 }
 
-.pokemon-list {
-    list-style-type: none;
-  }
+.pokemon-list
+{
+  list-style-type: none;
+}
 
-button:hover {
-    background-color: white;
-    color: #222224;
-  }
-
- 
+.pokemon-button:hover
+{
+  background-color: white;
+  color: #222224;
+}
