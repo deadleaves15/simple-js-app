@@ -25,6 +25,14 @@ let pokemonRepository = (function() {
   }
 
   function showDetailsModal(pokemon) {
+    $('.modal-body').empty()
+      .append(`<img class="pokemon-img" src="${pokemon.imageUrl}" />`)
+      .append(`<p>Height: ${pokemon.height}</p>`)
+      .append(`<p>Types: ${pokemon.types}</p>`);
+    $('.modal-title').text(pokemon.name);
+  }  
+
+ /* function showDetailsModal(pokemon) {
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
 
@@ -38,22 +46,11 @@ let pokemonRepository = (function() {
     modalBody.append(image);
     modalBody.append(height);
     modalBody.append(types);
-  }
+  } */
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function(pokemon) {
       showDetailsModal(pokemon);
-    });
-  }
-
-  function addListItem(pokemon) {
-    let listItem = $('<li class="group-list-item"></li>');
-    let button = $(`<button class="pokemon-button btn btn-primary" data-target="#pokemon-modal" data-toggle="modal"">${pokemon.name}</button>`);
-
-    listItem.append(button);
-    pokemonList.append(listItem);
-    button.on('click', () => {
-      showDetails(pokemon);
     });
   }
 
@@ -72,6 +69,29 @@ let pokemonRepository = (function() {
       console.error(e);
     });
   }
+
+  function addListItem(pokemon) {
+    let listItem = $('<li class="group-list-item"></li>');
+    let button = $(`<button class="pokemon-button btn btn-primary" data-target="#pokemon-modal" data-toggle="modal"">${pokemon.name}</button>`);
+
+    listItem.append(button);
+    pokemonList.append(listItem);
+    listItem.find('.pokemon-button').on('click', () => {
+      showDetails(pokemon);
+    });
+  }
+
+ /* function addListItem(pokemon) {
+    let listItem = $('<li class="group-list-item"></li>');
+    let button = $(`<button class="pokemon-button btn btn-primary" data-target="#pokemon-modal" data-toggle="modal"">${pokemon.name}</button>`);
+
+    listItem.append(button);
+    pokemonList.append(listItem);
+    button.on('click', () => {
+      showDetails(pokemon);
+    });
+  } */
+
 
   /* Modal mania mayhem */
 
