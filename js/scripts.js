@@ -48,12 +48,6 @@ let pokemonRepository = (function() {
     modalBody.append(types);
   } */
 
-  function showDetails(pokemon) {
-    loadDetails(pokemon).then(function(pokemon) {
-      showDetailsModal(pokemon);
-    });
-  }
-
   function loadList() {
     return fetch(apiUrl).then(function(response) {
       return response.json();
@@ -78,6 +72,12 @@ let pokemonRepository = (function() {
     pokemonList.append(listItem);
     listItem.find('.pokemon-button').on('click', () => {
       showDetails(pokemon);
+    });
+  }
+
+  function showDetails(pokemon) {
+    loadDetails(pokemon).then(function(pokemon) {
+      showDetailsModal(pokemon);
     });
   }
 
