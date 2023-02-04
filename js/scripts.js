@@ -24,13 +24,16 @@ let pokemonRepository = (function() {
     });
   }
 
-  function showDetailsModal(pokemon) {
-    $('.modal-body').empty()
-      .append(`<img class="pokemon-img" src="${pokemon.imageUrl}" />`)
-      .append(`<p>Height: ${pokemon.height}</p>`)
-      .append(`<p>Types: ${pokemon.types}</p>`);
-    $('.modal-title').text(pokemon.name);
-  }  
+  function showDetails(pokemon) {
+    loadDetails(pokemon).then(function(pokemon) {
+      $('.modal-body').empty()
+        .append(`<img class="pokemon-img" src="${pokemon.imageUrl}" />`)
+        .append(`<p>Height: ${pokemon.height}</p>`)
+        .append(`<p>Types: ${pokemon.types}</p>`);
+      $('.modal-title').text(pokemon.name);
+    });
+  }
+   
 
  /* function showDetailsModal(pokemon) {
     let modalBody = $('.modal-body');
@@ -75,11 +78,15 @@ let pokemonRepository = (function() {
     });
   }
 
-  function showDetails(pokemon) {
+  /* function showDetails(pokemon) {
     loadDetails(pokemon).then(function(pokemon) {
-      showDetailsModal(pokemon);
+      $('.modal-body').empty()
+        .append(`<img class="pokemon-img" src="${pokemon.imageUrl}" />`)
+        .append(`<p>Height: ${pokemon.height}</p>`)
+        .append(`<p>Types: ${pokemon.types}</p>`);
+      $('.modal-title').text(pokemon.name);
     });
-  }
+  } */
 
  /* function addListItem(pokemon) {
     let listItem = $('<li class="group-list-item"></li>');
@@ -114,7 +121,6 @@ let pokemonRepository = (function() {
     loadList: loadList,
     loadDetails: loadDetails,
     showDetails: showDetails,
-    showDetailsModal: showDetailsModal,
     hideModal: hideModal
   };
 })();
