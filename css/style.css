@@ -57,3 +57,18 @@ h1, p
   background-color: white;
   color: #222224;
 }
+
+.modal-dialog {
+  border: 8px solid;
+  border-radius: 25px 25px;
+  border-color: black;
+  font-family: 'Pokemon Solid', sans-serif;
+  font-size: 24px;
+  color: yellow;
+  background-color: #196EEF;
+}
+
+.modal-header {
+  background-color: #196EEF;
+  border 8px solid;
+}
