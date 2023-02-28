@@ -1,5 +1,7 @@
 Pokemon Repository
-A repository for pokemons using JavaScript. The repository has the following functionalities:
+This code is a JavaScript implementation of a Pokemon repository that retrieves a list of 150 Pokemon from the PokeAPI and allows adding additional Pokemon, loading their details, displaying the details in a modal window, and hiding the modal window by either clicking outside of it or by pressing the Escape key.
+
+The repository has the following functionalities:
 
 Methods
 add(pokemon)
